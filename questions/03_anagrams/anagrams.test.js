@@ -15,3 +15,4 @@ describe('Anagram', () => {
     expect(checkAnagrams('1233456', '09823485')).toEqual(false);
   });
 });
+
