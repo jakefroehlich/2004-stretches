@@ -13,19 +13,19 @@ const lockBox = (code, message) => {
       this.message = message;
     }
 
-    modCode = (suppliedCode, newCode) => {
+    modCode(suppliedCode, newCode) {
       if (suppliedCode === this.code && typeof newCode === 'number') {
         this.code = newCode;
       }
     }
 
-    modMessage = (suppliedCode, newMessage) => {
+    modMessage(suppliedCode, newMessage) {
       if (suppliedCode === this.code && typeof newMessage === 'string') {
         this.message = newMessage
       }
     }
 
-    revealMessage = (suppliedCode) => {
+    revealMessage(suppliedCode) {
       if (suppliedCode !== this.code) {
         throw('failure');
       }
