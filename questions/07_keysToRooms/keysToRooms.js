@@ -26,13 +26,13 @@ const keysToRooms = (rooms) => {
       for (let j = 0; j < 1; j++) {
         let key = room[j]
 
-        if (!keys.includes(key)) {
+        if (i !== rooms.length - 1 && !keys.includes(key)) {
           keys.push(key);
         }
+        else if (i === rooms.length - 1) {
+          return true;
+        }
       }
-    }
-    else if (i === rooms.length -1){
-      return true;
     }
     else {
       return false;
