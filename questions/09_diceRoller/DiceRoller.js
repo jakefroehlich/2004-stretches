@@ -32,3 +32,22 @@ class DiceRoller {
 }
 
 module.exports = { DiceRoller };
+
+const filePath = 'thisFile.file'
+const promise1 = new Promise((resolved, rejected) => {
+  readFile(filePath, (err, data) => {
+    if (err) {
+      rejected(err);
+    }
+    else {
+      resolved(data);
+    }
+  })
+})
+
+promise1.then((data) => {
+  callback(data);
+})
+.catch(err => {
+  console.error(err);
+})
