@@ -22,8 +22,39 @@ examples:
 1994 // MCMXCIV
 */
 
-const romanInteger = () => {
-  //YOUR CODE HERE
+const romanInteger = (num) => {
+  let numerals = '';
+
+  if (num <= 0 || num > 3999) {
+    throw Error;
+  }
+
+
+  if (num % 10 !== 0) {
+    if (num == 1) {
+      numerals += 'I';
+      return numerals;
+    }
+    else if (num < 4) {
+      numerals += 'I';
+      num--;
+      romanInteger(num);
+    }
+    else if (num == 4) {
+      numerals += 'IV'
+      num -= 4;
+      romanInteger(num);
+    }
+  //   else if (num < 10 && !numerals.includes('V')) {
+  //     numerals += 'V'
+  //     romanInteger(num);
+  //   }
+  //   else if (num < 10) {
+  //     numerals += 'I';
+  //     num --;
+  //     romanInteger(num);
+  //   }
+  //}
 };
 
 module.exports = { romanInteger };
