@@ -7,8 +7,24 @@
 // * Play *
 // ********
 
-const movieposter = () => {
-  //write code here
+const movieposter = (array) => {
+  let intro = '********'
+  let outro = '********'
+
+  let poster = intro;
+  while(array.length < 1) {
+    let i = 1;
+    let word = array[i];
+
+    poster += `* ${word} *`;
+    
+
+    i++;
+  }
+
+  poster += outro;
+
+  return poster;
 };
 
 module.exports = { movieposter };
