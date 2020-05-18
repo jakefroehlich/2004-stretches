@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class BookReview {
     constructor(title, author) {
         this.title = title;
@@ -24,4 +25,7 @@ class BookReview {
         }
     }
 }
+=======
+class BookReview {}
+>>>>>>> 9ebcacc6d65349e394064eda4e317f144d6d8178
 module.exports = { BookReview };
