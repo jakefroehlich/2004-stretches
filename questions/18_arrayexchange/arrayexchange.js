@@ -9,14 +9,14 @@ const arrayexchange = (arrayOne, arrayTwo) => {
     const newArrayOne = [];
     const newArrayTwo = [];
     
-    for (let j = 0; j < arrayOne.length + newArrayOne.length; j++) {
-        newArrayOne.push(arrayOne.pop());
-        console.log(newArrayOne)
+    for (let j = 0; j < arrayOne.length + arrayTwo.length; j++) {
+        arrayTwo.push(arrayOne.pop());
+        console.log(arrayTwo)
     }
 
     for (let i = 0; i < arrayTwo.length + newArrayTwo.length; i++) {
-        newArrayTwo.push(arrayTwo.pop());
-        console.log(newArrayTwo)
+        // newArrayTwo.push(arrayTwo.pop());
+        // console.log(newArrayTwo)
     }
 
     arrayOne = newArrayOne;
