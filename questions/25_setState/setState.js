@@ -5,9 +5,37 @@
 class StatefulThing {
   constructor(initialState = {}) {
     this.state = initialState;
+    this.prevState = {};
   }
-  setState() {
-    // YOUR CODE
+
+  setState(update) {
+    let newState = {};
+    this.prevState = this.state;
+
+    for (let key in this.state) {
+      this.prevState[key] = this.state[key];
+    }
+
+    console.log('before',this.state)
+
+    for (let key in this.state) {
+      for (let updateKey in update) {
+        if (key == updateKey) {
+          newState[key] = update[key];
+        }
+        else {
+          newState[key] = this.state[key];
+        }
+      }
+    }
+
+    console.log('after',this.state)
+
+    return newState;
+  }
+
+  goBack() {
+    return this.prevState;
   }
 }
 
