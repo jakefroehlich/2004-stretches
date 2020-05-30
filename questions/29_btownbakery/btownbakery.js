@@ -8,20 +8,19 @@ const btownbake = (recipe, supplies) => {
   let maxNum = [];
 
   for (let key in recipe) {
-    for (let supply in supplies) {
-      if (key === supply) {
-        let makeNum = supplies[supply] / recipe[key];
+    
+      if (key in supplies) {
+        let makeNum = supplies[key] / recipe[key];
 
-        if (makeNum < 1) {
-          return 0;
-        }
-
-        maxNum.push(makeNum);
+        maxNum.push(Math.floor(makeNum));
+      }
+      else {
+        return 0;
       }
     }
-  }
+  
 
-  console.log(maxNum);
+  return Math.min(...maxNum)
 };
 
 module.exports = { btownbake };
