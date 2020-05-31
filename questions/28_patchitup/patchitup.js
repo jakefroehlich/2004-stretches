@@ -7,3 +7,36 @@
 // - Also NB: repl.it doesn't let you monkey patch! but the chrome console does.
 
 //code goes here
+
+Array.prototype.countBy = function (fn) {
+    let obj = {};
+
+    if (fn) {
+        let newArray = this.map(el => fn(el));
+
+        for (let i = 0; i < newArray.length; i++) {
+            let element = newArray[i];
+
+            if (!(obj[element])) {
+                obj[element] = 1;
+            }
+            else {
+                obj[element]++;
+            }
+        }
+    }
+    else {
+        for (let i = 0; i < this.length; i++) {
+            let element = this[i];
+
+            if (!(obj[element])) {
+                obj[element] = 1;
+            }
+            else {
+                obj[element]++;
+            }
+        }
+    }
+
+    return obj;
+}
