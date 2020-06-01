@@ -16,4 +16,16 @@
 
 // YOUR CODE (intentionally blank):
 
+let counter = 0;
+
+Array.prototype.next = function() {
+    console.log(this[counter])
+    counter ++;
+    if (counter >= this.length) {
+        counter = 0;
+    }
+
+    return this
+}
+
 // no export statement required
