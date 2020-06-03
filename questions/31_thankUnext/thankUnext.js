@@ -19,13 +19,15 @@
 let counter = 0;
 
 Array.prototype.next = function() {
-    console.log(this[counter])
+    console.log(this[counter]);
+
     counter ++;
+    
     if (counter >= this.length) {
         counter = 0;
     }
 
-    return this
+    return this;
 }
 
 // no export statement required
