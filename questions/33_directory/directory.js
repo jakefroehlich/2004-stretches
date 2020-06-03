@@ -10,8 +10,21 @@
 // };
 // directory(phonebookData)=>{ 'a/b/c': 12 }
 
-const directory = () => {
-  //code in here
+const directory = (obj) => {
+  let finalObj = {};
+  let path = '';
+
+  for (let key in obj) {
+    if (typeof obj[key] !== 'object' || Array.isArray(obj[key])) {
+      finalObj[path] = obj[key];
+    }
+    else {
+      path += `${key}/`
+      return directory(obj[key]);
+    }
+  }
+  
+  return path; 
 };
 
 module.exports = { directory };
