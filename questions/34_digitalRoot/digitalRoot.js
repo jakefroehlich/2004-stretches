@@ -18,7 +18,7 @@ class digitalRoot {
             for (let i = 0; i < stringNum.length; ++i) {
                 let currentNum = stringNum[i];
 
-                sum += parseInt(currentNum)
+                sum += parseInt(currentNum);
             }
             
             return this.root(sum);
