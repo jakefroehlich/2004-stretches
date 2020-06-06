@@ -5,7 +5,7 @@ describe('lockBox functionality', () => {
     expect(() => lockBox('123', 123)).toThrow();
   });
   test('lockBox should have methods -> modCode, modMessage, and revealMessage', () => {
-    expect(lockBox(123, 'secret message')).toEqual({
+    expect(new lockBox(123, 'secret message')).toEqual({
       modCode: expect.any(Function),
       modMessage: expect.any(Function),
       revealMessage: expect.any(Function),

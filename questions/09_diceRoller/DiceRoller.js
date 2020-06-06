@@ -14,7 +14,6 @@ class DiceRoller {
 
     this.total = total
     this.sides = sides
-    
     this.history = []
   }
 

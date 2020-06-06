@@ -3,7 +3,7 @@
 
 const checkAnagrams = (str1, str2) => {
   if (str1.length != str2.length) {
-    return false
+    return false;
   }
 
   for (let i = 0; i < str1.length; i++) {

@@ -1,39 +1,38 @@
-const lockBox = (code, message) => {
-
+function lockBox(code, msg)  {
   if (typeof code !== 'number') {
     throw('failure');
   } 
-  else if (typeof message !== 'string') {
+  else if (typeof msg !== 'string') {
     throw('failure');
   }
 
-  return class {
-    constructor(code, message) {
-      this.code = code;
-      this.message = message;
-    }
+  let securityCode = code;
+  let message = msg;
 
-    modCode(suppliedCode, newCode) {
-      if (suppliedCode === this.code && typeof newCode === 'number') {
-        this.code = newCode;
+  return {
+    modCode(code, newCode) {
+      if (code === securityCode) {
+        securityCode = newCode;
+        return newCode;
       }
-    }
+    },
 
-    modMessage(suppliedCode, newMessage) {
-      if (suppliedCode === this.code && typeof newMessage === 'string') {
-        this.message = newMessage
+    modMessage(code, newMsg) {
+      if (code === securityCode) {
+        message = newMsg;
+        return newMsg;
       }
-    }
+    },
 
-    revealMessage(suppliedCode) {
-      if (suppliedCode !== this.code) {
-        throw('failure');
+    revealMessage(code) {
+      if (code !== securityCode) {
+        throw new Error;
       }
       else {
-        return this.message;
+        return message;
       }
     }
   }
-};
+}
 
 module.exports = { lockBox };

@@ -10,11 +10,13 @@ const validPalindrome = (value) => {
 
   let valueArray = value.split('');
 
-  valueArray.reduce(char => {
-    if (letters.includes(char)) {
-      return char;
-    }
-  })
+  valueArray = valueArray
+    .filter(char => {
+      if (letters.includes(char)) {
+        return char;
+      }
+    })
+    .map(letter => letter.toLowerCase());
 
   for (let i = 0; i < valueArray.length; i++) {
     if (valueArray[i] !== valueArray[valueArray.length - (1 + i)]) {

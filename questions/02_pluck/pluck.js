@@ -16,16 +16,16 @@ pluck(obj3, ['a', 'c', 'x'])
 returns { a: 1, c: 42};
 */
 
-function pluck(obj, elements) {
-  let finalObj = {};
+function pluck(obj, keys) {
+  let newObj = {};
 
-  elements.forEach((elem) => {
-    if (!!obj[elem]){
-      finalObj[elem] = obj[elem];
+  for (let key in obj) {
+    if (keys.includes(key)) {
+      newObj[key] = obj[key];
     }
-  })
+  }
 
-  return finalObj;
+  return newObj;
 }
 
 module.exports = { pluck };
