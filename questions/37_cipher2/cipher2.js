@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const decypher = (string) => {
 
   let code = '';
@@ -35,5 +36,9 @@ const decypher = (string) => {
   //   }
   // }
   return `${firstChar}${secondChar}${thirdChar}${rest}`;
+=======
+const decypher = () => {
+  //YOUR CODE HERE
+>>>>>>> b994823313926a9c8f9f8dbf85f03796c93b727c
 };
 module.exports = { decypher };
