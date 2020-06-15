@@ -1,7 +1,8 @@
-const { makeyourown } = require('./makeyourown');
+const { Farmville } = require('./makeyourown');
 
 describe('makeyourown functionality', () => {
-  it('your first test spec', () => {
-    expect(makeyourown()).toEqual();
+  it('should be an object', () => {
+    let farm = new Farmville;
+    expect(typeof farm).toEqual('object');
   });
 });
