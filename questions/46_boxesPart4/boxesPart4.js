@@ -32,7 +32,6 @@ class Box {
   //*****YOUR CODE STARTS HERE******
   expand(amt, boxarr) {
     this.capacity += amt;
-    console.log(this.capacity)
 
     for (let i = 0; i< boxarr.length; i++) {
       let box = boxarr[i];
