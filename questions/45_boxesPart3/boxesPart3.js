@@ -24,7 +24,15 @@ class Box {
     }
     return result;
   }
-  //YOUR CODE STARTS HERE
+  
+  movingVan(dur) {
+    if (typeof dur !== 'number') {
+      throw new Error('Duration must be a number!')
+    }
+    setTimeout(() => {
+      return this.unpack();
+    }, dur)
+  }
 }
 
 module.exports = { Box };

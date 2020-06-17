@@ -30,6 +30,27 @@ class Box {
     return setTimeout(() => this.unpack(), dur);
   }
   //*****YOUR CODE STARTS HERE******
+  expand(amt, boxarr) {
+    this.capacity += amt;
+    console.log(this.capacity)
+
+    for (let i = 0; i< boxarr.length; i++) {
+      let box = boxarr[i];
+
+      this.pack(...box);
+    }
+  }
+
+  loot(idx) {
+    if (idx <= this.contents.length) {
+      return this.contents[idx];
+    }
+    else {
+      let random = Math.floor(Math.random() * this.contents.length)
+
+      return this.contents[random];
+    }
+  }
 }
 
 module.exports = { Box };
