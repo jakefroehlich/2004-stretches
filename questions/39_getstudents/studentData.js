@@ -21,7 +21,7 @@ module.exports = {
   },
   6: {
     name: 'Jake',
-    favoriteColor: 'yellow',
+    favoriteColor: 'orange',
   },
   7: {
     name: 'Jason',

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> today
 const decypher = (string) => {
 
   let code = '';
@@ -39,6 +43,14 @@ const decypher = (string) => {
 =======
 const decypher = () => {
   //YOUR CODE HERE
+<<<<<<< HEAD
 >>>>>>> e1d7f483e8bccdd22cd1e3ba454d9c399167f4e5
+=======
+>>>>>>> b994823313926a9c8f9f8dbf85f03796c93b727c
+=======
+const decypher = () => {
+  //YOUR CODE HERE
+>>>>>>> 323e2f0c960e34cfef6828cdb6e82618dfa16430
+>>>>>>> today
 };
 module.exports = { decypher };
