@@ -17,7 +17,27 @@
 // result = "csps123"
 
 const encryptString = (str, shift) => {
-  // YOUR CODE
+  let encrypt = '';
+  let letters = 'abcdefghijklmnopqrstuvwxyz';
+  let numbers = '1234567890'
+
+  let lowStr = str.toLowerCase();
+
+  for (let i = 0; i < lowStr.length; ++i) {
+    let current = lowStr[i];
+
+    let idx = letters.indexOf(current) || numbers.indexOf(current)
+
+    if(idx === -1) {
+      throw new Error;
+    }
+
+    let crypt = letters[idx + shift];
+
+
+  }
+
+  return encrypt;
 };
 
 module.exports = { encryptString };
