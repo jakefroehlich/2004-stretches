@@ -1,4 +1,4 @@
-const { Messenger } = require('./unsubscribe');
+ const { Messenger } = require('./unsubscribe');
 
 describe('Messenger functionality', () => {
   it('Messenger takes an object and name param or throws error', () => {
