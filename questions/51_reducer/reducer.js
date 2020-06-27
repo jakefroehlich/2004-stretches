@@ -19,8 +19,15 @@ const initialState = [
 const reducer = (state = initialState, action) => {
   //ADD YOUR CODE HERE
   switch (action.type) {
+    case types.ADD_TODO:
+      return [{
+        ...state,
+        text: action.text,
+        completed: false,
+        id: 0,
+      }]
     default:
-      return;
+      return state;
   }
 };
 
