@@ -5,8 +5,19 @@
 
 //***Your solution should NOT include nested loops of any type***
 
-const twoNumberSum = () => {
-  //write code here
+const twoNumberSum = (array, target) => {
+
+  let idx
+
+  for (let i = 0; i < array.length; ++i) {
+    let element = array[i];
+
+    if (array.includes(Math.abs(element - target))) {
+      idx = array.indexOf(Math.abs(element - target)) 
+      
+      return [element, array[idx]]
+    }
+  }
 };
 
 module.exports = { twoNumberSum };
