@@ -17,6 +17,11 @@ const twoNumberSum = (array, target) => {
       
       return [element, array[idx]]
     }
+    else if (array.includes(target - element)) {
+      idx = array.indexOf(target - element) 
+
+      return [element, array[idx]]
+    }
   }
 };
 

@@ -4,4 +4,11 @@
 
 //write your function here
 
-module.exports = { sqauredGen };
+function* squaredGen(i, j) {
+    if (i ^2 <= j^2) {
+        yield i^2;
+    }
+    return true;
+}
+
+module.exports = { squaredGen };
